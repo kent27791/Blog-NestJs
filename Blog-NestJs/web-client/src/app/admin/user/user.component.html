@@ -1,0 +1,12 @@
+<ul>
+  <li *ngFor="let user of users">
+    <button (click)="getUserDetails(user.id)">{{ user.userName }}</button>
+  </li>
+</ul>
+
+<div *ngIf="currentUser">
+  <h3>Details</h3>
+  <p>{{ currentUser?.id }}</p>
+  <p>{{ currentUser?.userName }}</p>
+  <p>{{ currentUser?.avatar }}</p>
+</div>
