@@ -11,7 +11,7 @@ export class UserController {
 
     @Post()
     @HttpCode(HttpStatus.OK)
-    @Authorize(['Api.User', 'Api.User.Create'], ['Admin'], false)
+    @Authorize(['Api.User', 'Api.User.DropTable'], ['Admin'], true)
     async getUser(@InputDatatable() input) {
         return await this.userService.findAll(input);
     }

@@ -22,7 +22,7 @@ export class AuthorizeGuard implements CanActivate {
     const pers = this.reflector.get<string[]>('pers', context.getHandler()) || [];
     const persClass = this.reflector.get<string[]>('pers', context.getClass()) || [];
     const requirePers = [ ...pers, ...persClass ];
-
+    
     if(requireRoles.length == 0 && requirePers.length == 0) {
       return true;
     }
