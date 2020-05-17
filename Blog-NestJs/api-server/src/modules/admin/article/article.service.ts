@@ -3,7 +3,6 @@ import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { Article, ArticleDto } from './article-proxy';
 import { PagingResultDto } from 'src/modules/shared/proxy.model';
-import { User } from 'src/modules/auth/user/user-proxy';
 
 @Injectable()
 export class ArticleService {

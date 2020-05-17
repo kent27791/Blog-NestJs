@@ -7,7 +7,7 @@ export const InputDatatable = createParamDecorator(
     const input = {
         paging: {
             skip: req.body?.paging?.skip || 0,
-            take: req.body?.paging?.skip || 10,
+            limit: req.body?.paging?.limit || 10,
         },
         filter: req.body?.filter || {},
         sort: req.body?.sort || {}

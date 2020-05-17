@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AuthModule } from '../auth/auth.module';
 import { AdminModule } from '../admin/admin.module';
 import { LayoutComponent } from './layout.component';
+import { MainModule } from '../main/main.module';
 
 
 const routes: Routes = [
@@ -19,8 +20,12 @@ const routes: Routes = [
         loadChildren: () => AdminModule
       },
       {
+        path: 'main',
+        loadChildren: () => MainModule
+      },
+      {
         path: '**',
-        redirectTo: 'admin/dashboard'
+        redirectTo: 'main/home'
       }
     ]
   }

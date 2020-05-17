@@ -1,2 +1,22 @@
-<p>layout</p>
-<router-outlet></router-outlet>
+<section class="vbox">
+  <header class="bg-white-only header header-md navbar navbar-fixed-top-xs">
+    <app-header></app-header>
+  </header>
+
+  <section>
+    <section class="hbox stretch">
+      <!-- .aside -->
+      <aside class="bg-black dk aside hidden-print" id="nav">
+        <app-sidebar></app-sidebar>
+      </aside>
+      <!-- /.aside -->
+      <section id="content">
+        <section class="vbox">
+          <section class="scrollable wrapper">
+            <router-outlet></router-outlet>
+          </section>
+        </section>
+      </section>
+    </section>
+  </section>
+</section>
